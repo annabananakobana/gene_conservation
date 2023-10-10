@@ -3,7 +3,7 @@
 
 module load LASTZ/1.04.03-GCC-9.2.0
 
-cat /nesi/nobackup/uoo02820/gene_conservation_multiz/assembly_databases/genomes/candidate_genes_no_Il11ra.txt | while read -r gene; do
+cat /nesi/nobackup/uoo02820/gene_conservation_multiz/assembly_databases/genomes/candidate_genes.txt | while read -r gene; do
                 cd /nesi/nobackup/uoo02820/gene_conservation_multiz/assembly_databases/genomes/final_fasta_files/$gene/
         # Counting the number of files for when we step through things
         numfiles=`wc -l /nesi/nobackup/uoo02820/gene_conservation_multiz/assembly_databases/genomes/rodent_labelled_files.txt | awk '{print $1}'`;
