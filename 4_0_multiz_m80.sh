@@ -12,7 +12,7 @@
 export PATH=/nesi/nobackup/uoo02820/gene_conservation_multiz/multiz:${PATH}
 
 #female candidates 
-cat /nesi/nobackup/uoo02820/gene_conservation_multiz/assembly_databases/genomes/candidate_genes_no_Il11ra.txt | while read -r gene; do
+cat /nesi/nobackup/uoo02820/gene_conservation_multiz/assembly_databases/genomes/candidate_genes.txt | while read -r gene; do
 	cd /nesi/nobackup/uoo02820/gene_conservation_multiz/assembly_databases/genomes/final_fasta_files/$gene/
 	mkdir -p results_5_20_75
 	multiz M=80 $gene\_lastz_rodent_5_20_75.maf $gene\_lastz_nonrodent_5_20_75.maf 1 >results_5_20_75/"$gene"_multiz_align_5_20_75_m80.maf;
